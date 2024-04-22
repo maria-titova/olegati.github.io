@@ -1,0 +1,5 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+RewriteRule ^.htaccess$ - [F]
+RewriteRule ^(.*)state/(.*)$ $1?state=$2
