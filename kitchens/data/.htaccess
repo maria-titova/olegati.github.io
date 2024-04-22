@@ -1,0 +1,4 @@
+<files *.dat,*.php,*.html>
+Order allow,deny
+deny from all
+</files>
