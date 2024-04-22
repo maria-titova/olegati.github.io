@@ -1,844 +1,824 @@
-<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>OLEGATI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Galerio v1.2.0">
-    <meta name="DC.Date" content="2024-04-22T18:33:48.107115600+00:00">
-    <link rel="stylesheet" type="text/css" href="static/simple-lightbox.min.css">
-    <style type="text/css">
-        /* Reset */
-        * {
-            box-sizing: border-box;
-        }
-        html, body, div, img {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        body {
-            line-height: 1;
-        }
+<title>simple-gallery</title>
 
-        /* Page */
-        body {
-            font-family: verdana, sans-serif;
-            color: #eee;
-            background-color: #252025;
-        }
-        h1 {
-            text-align: center;
-        }
-        .links {
-            text-align: center;
-            margin: 8px 0 16px;
-        }
-        .links a {
-            color: #eee;
-        }
-        .links a:hover {
-            text-decoration: underline;
-        }
+<style>
 
-        /* Gallery */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 8px;
-            justify-content: center;
-        }
-        .gallery .thumb {
-            margin: 8px;
-        }
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  display: block;
+  overflow: hidden;
+}
+.jawn img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  <-- Each image should display for ~8s -->
+  animation: fade 864s infinite;
+  -webkit-animation: fade 864s infinite;
+}
 
-        /* Lightbox */
-        .sl-wrapper {
-            background-color: #121012;
-        }
-        .sl-wrapper .sl-counter,
-        .sl-wrapper .sl-navigation button,
-        .sl-wrapper .sl-close {
-            color: #eee;
-        }
-    </style>
+@keyframes fade {
+
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    1% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    1% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+
+
+#f1 {
+    animation-delay: 856s;
+}
+
+
+#f2 {
+    animation-delay: 848s;
+}
+
+
+#f3 {
+    animation-delay: 840s;
+}
+
+
+#f4 {
+    animation-delay: 832s;
+}
+
+
+#f5 {
+    animation-delay: 824s;
+}
+
+
+#f6 {
+    animation-delay: 816s;
+}
+
+
+#f7 {
+    animation-delay: 808s;
+}
+
+
+#f8 {
+    animation-delay: 800s;
+}
+
+
+#f9 {
+    animation-delay: 792s;
+}
+
+
+#f10 {
+    animation-delay: 784s;
+}
+
+
+#f11 {
+    animation-delay: 776s;
+}
+
+
+#f12 {
+    animation-delay: 768s;
+}
+
+
+#f13 {
+    animation-delay: 760s;
+}
+
+
+#f14 {
+    animation-delay: 752s;
+}
+
+
+#f15 {
+    animation-delay: 744s;
+}
+
+
+#f16 {
+    animation-delay: 736s;
+}
+
+
+#f17 {
+    animation-delay: 728s;
+}
+
+
+#f18 {
+    animation-delay: 720s;
+}
+
+
+#f19 {
+    animation-delay: 712s;
+}
+
+
+#f20 {
+    animation-delay: 704s;
+}
+
+
+#f21 {
+    animation-delay: 696s;
+}
+
+
+#f22 {
+    animation-delay: 688s;
+}
+
+
+#f23 {
+    animation-delay: 680s;
+}
+
+
+#f24 {
+    animation-delay: 672s;
+}
+
+
+#f25 {
+    animation-delay: 664s;
+}
+
+
+#f26 {
+    animation-delay: 656s;
+}
+
+
+#f27 {
+    animation-delay: 648s;
+}
+
+
+#f28 {
+    animation-delay: 640s;
+}
+
+
+#f29 {
+    animation-delay: 632s;
+}
+
+
+#f30 {
+    animation-delay: 624s;
+}
+
+
+#f31 {
+    animation-delay: 616s;
+}
+
+
+#f32 {
+    animation-delay: 608s;
+}
+
+
+#f33 {
+    animation-delay: 600s;
+}
+
+
+#f34 {
+    animation-delay: 592s;
+}
+
+
+#f35 {
+    animation-delay: 584s;
+}
+
+
+#f36 {
+    animation-delay: 576s;
+}
+
+
+#f37 {
+    animation-delay: 568s;
+}
+
+
+#f38 {
+    animation-delay: 560s;
+}
+
+
+#f39 {
+    animation-delay: 552s;
+}
+
+
+#f40 {
+    animation-delay: 544s;
+}
+
+
+#f41 {
+    animation-delay: 536s;
+}
+
+
+#f42 {
+    animation-delay: 528s;
+}
+
+
+#f43 {
+    animation-delay: 520s;
+}
+
+
+#f44 {
+    animation-delay: 512s;
+}
+
+
+#f45 {
+    animation-delay: 504s;
+}
+
+
+#f46 {
+    animation-delay: 496s;
+}
+
+
+#f47 {
+    animation-delay: 488s;
+}
+
+
+#f48 {
+    animation-delay: 480s;
+}
+
+
+#f49 {
+    animation-delay: 472s;
+}
+
+
+#f50 {
+    animation-delay: 464s;
+}
+
+
+#f51 {
+    animation-delay: 456s;
+}
+
+
+#f52 {
+    animation-delay: 448s;
+}
+
+
+#f53 {
+    animation-delay: 440s;
+}
+
+
+#f54 {
+    animation-delay: 432s;
+}
+
+
+#f55 {
+    animation-delay: 424s;
+}
+
+
+#f56 {
+    animation-delay: 416s;
+}
+
+
+#f57 {
+    animation-delay: 408s;
+}
+
+
+#f58 {
+    animation-delay: 400s;
+}
+
+
+#f59 {
+    animation-delay: 392s;
+}
+
+
+#f60 {
+    animation-delay: 384s;
+}
+
+
+#f61 {
+    animation-delay: 376s;
+}
+
+
+#f62 {
+    animation-delay: 368s;
+}
+
+
+#f63 {
+    animation-delay: 360s;
+}
+
+
+#f64 {
+    animation-delay: 352s;
+}
+
+
+#f65 {
+    animation-delay: 344s;
+}
+
+
+#f66 {
+    animation-delay: 336s;
+}
+
+
+#f67 {
+    animation-delay: 328s;
+}
+
+
+#f68 {
+    animation-delay: 320s;
+}
+
+
+#f69 {
+    animation-delay: 312s;
+}
+
+
+#f70 {
+    animation-delay: 304s;
+}
+
+
+#f71 {
+    animation-delay: 296s;
+}
+
+
+#f72 {
+    animation-delay: 288s;
+}
+
+
+#f73 {
+    animation-delay: 280s;
+}
+
+
+#f74 {
+    animation-delay: 272s;
+}
+
+
+#f75 {
+    animation-delay: 264s;
+}
+
+
+#f76 {
+    animation-delay: 256s;
+}
+
+
+#f77 {
+    animation-delay: 248s;
+}
+
+
+#f78 {
+    animation-delay: 240s;
+}
+
+
+#f79 {
+    animation-delay: 232s;
+}
+
+
+#f80 {
+    animation-delay: 224s;
+}
+
+
+#f81 {
+    animation-delay: 216s;
+}
+
+
+#f82 {
+    animation-delay: 208s;
+}
+
+
+#f83 {
+    animation-delay: 200s;
+}
+
+
+#f84 {
+    animation-delay: 192s;
+}
+
+
+#f85 {
+    animation-delay: 184s;
+}
+
+
+#f86 {
+    animation-delay: 176s;
+}
+
+
+#f87 {
+    animation-delay: 168s;
+}
+
+
+#f88 {
+    animation-delay: 160s;
+}
+
+
+#f89 {
+    animation-delay: 152s;
+}
+
+
+#f90 {
+    animation-delay: 144s;
+}
+
+
+#f91 {
+    animation-delay: 136s;
+}
+
+
+#f92 {
+    animation-delay: 128s;
+}
+
+
+#f93 {
+    animation-delay: 120s;
+}
+
+
+#f94 {
+    animation-delay: 112s;
+}
+
+
+#f95 {
+    animation-delay: 104s;
+}
+
+
+#f96 {
+    animation-delay: 96s;
+}
+
+
+#f97 {
+    animation-delay: 88s;
+}
+
+
+#f98 {
+    animation-delay: 80s;
+}
+
+
+#f99 {
+    animation-delay: 72s;
+}
+
+
+#f100 {
+    animation-delay: 64s;
+}
+
+
+#f101 {
+    animation-delay: 56s;
+}
+
+
+#f102 {
+    animation-delay: 48s;
+}
+
+
+#f103 {
+    animation-delay: 40s;
+}
+
+
+#f104 {
+    animation-delay: 32s;
+}
+
+
+#f105 {
+    animation-delay: 24s;
+}
+
+
+#f106 {
+    animation-delay: 16s;
+}
+
+
+#f107 {
+    animation-delay: 8s;
+}
+
+
+#f108 {
+    animation-delay: 0s;
+}
+
+</style>
 </head>
 
 <body>
-    <h1>OLEGATI</h1>
-    
-    <div class="links">
-        <a href="OLEGATI.zip">Download (ZIP, 7 MiB)</a>
-    </div>
-    
-    <div class="gallery">
-        
-        <div class="thumb">
-            <a href="02.jpg">
-                <img src="02.thumb.jpg" title="02.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="04.jpg">
-                <img src="04.thumb.jpg" title="04.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="05.jpg">
-                <img src="05.thumb.jpg" title="05.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="06.jpg">
-                <img src="06.thumb.jpg" title="06.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="08.jpg">
-                <img src="08.thumb.jpg" title="08.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="0l1s.jpg">
-                <img src="0l1s.thumb.jpg" title="0l1s.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="11.jpg">
-                <img src="11.thumb.jpg" title="11.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="1112222.jpg">
-                <img src="1112222.thumb.jpg" title="1112222.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="12.jpg">
-                <img src="12.thumb.jpg" title="12.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="121121.jpg">
-                <img src="121121.thumb.jpg" title="121121.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="12345.JPG">
-                <img src="12345.thumb.jpg" title="12345.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="14.jpg">
-                <img src="14.thumb.jpg" title="14.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="16.jpg">
-                <img src="16.thumb.jpg" title="16.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="17.jpg">
-                <img src="17.thumb.jpg" title="17.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="18.jpg">
-                <img src="18.thumb.jpg" title="18.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="19.jpg">
-                <img src="19.thumb.jpg" title="19.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="20.jpg">
-                <img src="20.thumb.jpg" title="20.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="201201.JPG">
-                <img src="201201.thumb.jpg" title="201201.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="201203.JPG">
-                <img src="201203.thumb.jpg" title="201203.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="201204.JPG">
-                <img src="201204.thumb.jpg" title="201204.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="21.jpg">
-                <img src="21.thumb.jpg" title="21.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="22.jpg">
-                <img src="22.thumb.jpg" title="22.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="23.jpg">
-                <img src="23.thumb.jpg" title="23.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="24.jpg">
-                <img src="24.thumb.jpg" title="24.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="3.jpg">
-                <img src="3.thumb.jpg" title="3.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="30.jpg">
-                <img src="30.thumb.jpg" title="30.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="33.jpg">
-                <img src="33.thumb.jpg" title="33.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="34.jpg">
-                <img src="34.thumb.jpg" title="34.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="35.jpg">
-                <img src="35.thumb.jpg" title="35.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="36.jpg">
-                <img src="36.thumb.jpg" title="36.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="37.jpg">
-                <img src="37.thumb.jpg" title="37.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="38.jpg">
-                <img src="38.thumb.jpg" title="38.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="39.jpg">
-                <img src="39.thumb.jpg" title="39.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="4.jpg">
-                <img src="4.thumb.jpg" title="4.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="40.jpg">
-                <img src="40.thumb.jpg" title="40.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="41.jpg">
-                <img src="41.thumb.jpg" title="41.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="42.jpg">
-                <img src="42.thumb.jpg" title="42.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="43.jpg">
-                <img src="43.thumb.jpg" title="43.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="44.jpg">
-                <img src="44.thumb.jpg" title="44.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="47.jpg">
-                <img src="47.thumb.jpg" title="47.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="49.jpg">
-                <img src="49.thumb.jpg" title="49.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="5.jpg">
-                <img src="5.thumb.jpg" title="5.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="50.jpg">
-                <img src="50.thumb.jpg" title="50.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="51.jpg">
-                <img src="51.thumb.jpg" title="51.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="52.jpg">
-                <img src="52.thumb.jpg" title="52.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="53.jpg">
-                <img src="53.thumb.jpg" title="53.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="54.jpg">
-                <img src="54.thumb.jpg" title="54.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="55.jpg">
-                <img src="55.thumb.jpg" title="55.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="56.jpg">
-                <img src="56.thumb.jpg" title="56.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="58.jpg">
-                <img src="58.thumb.jpg" title="58.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="59.jpg">
-                <img src="59.thumb.jpg" title="59.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="6.jpg">
-                <img src="6.thumb.jpg" title="6.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="60.jpg">
-                <img src="60.thumb.jpg" title="60.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="61.jpg">
-                <img src="61.thumb.jpg" title="61.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="62.jpg">
-                <img src="62.thumb.jpg" title="62.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="63.jpg">
-                <img src="63.thumb.jpg" title="63.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="64.jpg">
-                <img src="64.thumb.jpg" title="64.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="66.jpg">
-                <img src="66.thumb.jpg" title="66.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="67.jpg">
-                <img src="67.thumb.jpg" title="67.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="69.jpg">
-                <img src="69.thumb.jpg" title="69.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="6os.jpg">
-                <img src="6os.thumb.jpg" title="6os.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="7.jpg">
-                <img src="7.thumb.jpg" title="7.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="70.jpg">
-                <img src="70.thumb.jpg" title="70.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="71.jpg">
-                <img src="71.thumb.jpg" title="71.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="710.jpg">
-                <img src="710.thumb.jpg" title="710.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="711.jpg">
-                <img src="711.thumb.jpg" title="711.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="712.jpg">
-                <img src="712.thumb.jpg" title="712.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="713.jpg">
-                <img src="713.thumb.jpg" title="713.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="714.jpg">
-                <img src="714.thumb.jpg" title="714.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="715.jpg">
-                <img src="715.thumb.jpg" title="715.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="716.jpg">
-                <img src="716.thumb.jpg" title="716.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="717.jpg">
-                <img src="717.thumb.jpg" title="717.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="718.jpg">
-                <img src="718.thumb.jpg" title="718.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="719.jpg">
-                <img src="719.thumb.jpg" title="719.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="720.jpg">
-                <img src="720.thumb.jpg" title="720.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="73.jpg">
-                <img src="73.thumb.jpg" title="73.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="730.jpg">
-                <img src="730.thumb.jpg" title="730.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="731.jpg">
-                <img src="731.thumb.jpg" title="731.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="74.jpg">
-                <img src="74.thumb.jpg" title="74.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="75.jpg">
-                <img src="75.thumb.jpg" title="75.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="76.jpg">
-                <img src="76.thumb.jpg" title="76.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="77.jpg">
-                <img src="77.thumb.jpg" title="77.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="77777777.jpg">
-                <img src="77777777.thumb.jpg" title="77777777.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="78.jpg">
-                <img src="78.thumb.jpg" title="78.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="79.jpg">
-                <img src="79.thumb.jpg" title="79.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="8.jpg">
-                <img src="8.thumb.jpg" title="8.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="80.jpg">
-                <img src="80.thumb.jpg" title="80.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="81.jpg">
-                <img src="81.thumb.jpg" title="81.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="82.jpg">
-                <img src="82.thumb.jpg" title="82.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="83.jpg">
-                <img src="83.thumb.jpg" title="83.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="85.jpg">
-                <img src="85.thumb.jpg" title="85.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="86.jpg">
-                <img src="86.thumb.jpg" title="86.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="87.jpg">
-                <img src="87.thumb.jpg" title="87.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1297.JPG">
-                <img src="IMG_1297.thumb.jpg" title="IMG_1297.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1305.JPG">
-                <img src="IMG_1305.thumb.jpg" title="IMG_1305.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1346.JPG">
-                <img src="IMG_1346.thumb.jpg" title="IMG_1346.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1409.JPG">
-                <img src="IMG_1409.thumb.jpg" title="IMG_1409.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1422.JPG">
-                <img src="IMG_1422.thumb.jpg" title="IMG_1422.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1423.JPG">
-                <img src="IMG_1423.thumb.jpg" title="IMG_1423.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1531.JPG">
-                <img src="IMG_1531.thumb.jpg" title="IMG_1531.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1742.JPG">
-                <img src="IMG_1742.thumb.jpg" title="IMG_1742.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1749.JPG">
-                <img src="IMG_1749.thumb.jpg" title="IMG_1749.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1865.JPG">
-                <img src="IMG_1865.thumb.jpg" title="IMG_1865.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1868.JPG">
-                <img src="IMG_1868.thumb.jpg" title="IMG_1868.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="IMG_1903.JPG">
-                <img src="IMG_1903.thumb.jpg" title="IMG_1903.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="OO2.jpg">
-                <img src="OO2.thumb.jpg" title="OO2.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="OO3.jpg">
-                <img src="OO3.thumb.jpg" title="OO3.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="chkaf1.jpg">
-                <img src="chkaf1.thumb.jpg" title="chkaf1.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="contacts.jpg">
-                <img src="contacts.thumb.jpg" title="contacts.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="g177.JPG">
-                <img src="g177.thumb.jpg" title="g177.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="g277.JPG">
-                <img src="g277.thumb.jpg" title="g277.JPG">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="g488.jpg">
-                <img src="g488.thumb.jpg" title="g488.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol1.jpg">
-                <img src="ol1.thumb.jpg" title="ol1.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol11.jpg">
-                <img src="ol11.thumb.jpg" title="ol11.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol2.jpg">
-                <img src="ol2.thumb.jpg" title="ol2.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol3.jpg">
-                <img src="ol3.thumb.jpg" title="ol3.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol4.jpg">
-                <img src="ol4.thumb.jpg" title="ol4.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol5.jpg">
-                <img src="ol5.thumb.jpg" title="ol5.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol7.jpg">
-                <img src="ol7.thumb.jpg" title="ol7.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol8.jpg">
-                <img src="ol8.thumb.jpg" title="ol8.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="ol9.jpg">
-                <img src="ol9.thumb.jpg" title="ol9.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="oo4.jpg">
-                <img src="oo4.thumb.jpg" title="oo4.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="oo5.jpg">
-                <img src="oo5.thumb.jpg" title="oo5.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="shkaf1.jpg">
-                <img src="shkaf1.thumb.jpg" title="shkaf1.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="shkaf2.jpg">
-                <img src="shkaf2.thumb.jpg" title="shkaf2.jpg">
-            </a>
-        </div>
-        
-        <div class="thumb">
-            <a href="shkaf3.jpg">
-                <img src="shkaf3.thumb.jpg" title="shkaf3.jpg">
-            </a>
-        </div>
-        
-    </div>
-    <script src="static/simple-lightbox.min.js"></script>
-    <script>
-        const lightbox = new SimpleLightbox('.gallery a', {
-            captionDelay: 50,
-            fadeSpeed: 300,
-        });
-    </script>
+<div class="jawn fade">
+
+    <img id="f1" src="data\shkaf3.jpg">
+
+    <img id="f2" src="data\shkaf2.jpg">
+
+    <img id="f3" src="data\shkaf1.jpg">
+
+    <img id="f4" src="data\oo5.jpg">
+
+    <img id="f5" src="data\oo4.jpg">
+
+    <img id="f6" src="data\OO3.jpg">
+
+    <img id="f7" src="data\OO2.jpg">
+
+    <img id="f8" src="data\ol9.jpg">
+
+    <img id="f9" src="data\ol8.jpg">
+
+    <img id="f10" src="data\ol7.jpg">
+
+    <img id="f11" src="data\ol5.jpg">
+
+    <img id="f12" src="data\ol4.jpg">
+
+    <img id="f13" src="data\ol3.jpg">
+
+    <img id="f14" src="data\ol2.jpg">
+
+    <img id="f15" src="data\ol11.jpg">
+
+    <img id="f16" src="data\ol1.jpg">
+
+    <img id="f17" src="data\g488.jpg">
+
+    <img id="f18" src="data\contacts.jpg">
+
+    <img id="f19" src="data\chkaf1.jpg">
+
+    <img id="f20" src="data\87.jpg">
+
+    <img id="f21" src="data\86.jpg">
+
+    <img id="f22" src="data\85.jpg">
+
+    <img id="f23" src="data\83.jpg">
+
+    <img id="f24" src="data\82.jpg">
+
+    <img id="f25" src="data\81.jpg">
+
+    <img id="f26" src="data\80.jpg">
+
+    <img id="f27" src="data\8.jpg">
+
+    <img id="f28" src="data\79.jpg">
+
+    <img id="f29" src="data\78.jpg">
+
+    <img id="f30" src="data\77777777.jpg">
+
+    <img id="f31" src="data\77.jpg">
+
+    <img id="f32" src="data\76.jpg">
+
+    <img id="f33" src="data\75.jpg">
+
+    <img id="f34" src="data\74.jpg">
+
+    <img id="f35" src="data\731.jpg">
+
+    <img id="f36" src="data\730.jpg">
+
+    <img id="f37" src="data\73.jpg">
+
+    <img id="f38" src="data\720.jpg">
+
+    <img id="f39" src="data\719.jpg">
+
+    <img id="f40" src="data\718.jpg">
+
+    <img id="f41" src="data\717.jpg">
+
+    <img id="f42" src="data\716.jpg">
+
+    <img id="f43" src="data\715.jpg">
+
+    <img id="f44" src="data\714.jpg">
+
+    <img id="f45" src="data\713.jpg">
+
+    <img id="f46" src="data\712.jpg">
+
+    <img id="f47" src="data\711.jpg">
+
+    <img id="f48" src="data\710.jpg">
+
+    <img id="f49" src="data\71.jpg">
+
+    <img id="f50" src="data\70.jpg">
+
+    <img id="f51" src="data\7.jpg">
+
+    <img id="f52" src="data\6os.jpg">
+
+    <img id="f53" src="data\69.jpg">
+
+    <img id="f54" src="data\67.jpg">
+
+    <img id="f55" src="data\66.jpg">
+
+    <img id="f56" src="data\64.jpg">
+
+    <img id="f57" src="data\63.jpg">
+
+    <img id="f58" src="data\62.jpg">
+
+    <img id="f59" src="data\61.jpg">
+
+    <img id="f60" src="data\60.jpg">
+
+    <img id="f61" src="data\6.jpg">
+
+    <img id="f62" src="data\59.jpg">
+
+    <img id="f63" src="data\58.jpg">
+
+    <img id="f64" src="data\56.jpg">
+
+    <img id="f65" src="data\55.jpg">
+
+    <img id="f66" src="data\54.jpg">
+
+    <img id="f67" src="data\53.jpg">
+
+    <img id="f68" src="data\52.jpg">
+
+    <img id="f69" src="data\51.jpg">
+
+    <img id="f70" src="data\50.jpg">
+
+    <img id="f71" src="data\5.jpg">
+
+    <img id="f72" src="data\49.jpg">
+
+    <img id="f73" src="data\47.jpg">
+
+    <img id="f74" src="data\44.jpg">
+
+    <img id="f75" src="data\43.jpg">
+
+    <img id="f76" src="data\42.jpg">
+
+    <img id="f77" src="data\41.jpg">
+
+    <img id="f78" src="data\40.jpg">
+
+    <img id="f79" src="data\4.jpg">
+
+    <img id="f80" src="data\39.jpg">
+
+    <img id="f81" src="data\38.jpg">
+
+    <img id="f82" src="data\37.jpg">
+
+    <img id="f83" src="data\36.jpg">
+
+    <img id="f84" src="data\35.jpg">
+
+    <img id="f85" src="data\34.jpg">
+
+    <img id="f86" src="data\33.jpg">
+
+    <img id="f87" src="data\30.jpg">
+
+    <img id="f88" src="data\3.jpg">
+
+    <img id="f89" src="data\24.jpg">
+
+    <img id="f90" src="data\23.jpg">
+
+    <img id="f91" src="data\22.jpg">
+
+    <img id="f92" src="data\21.jpg">
+
+    <img id="f93" src="data\20.jpg">
+
+    <img id="f94" src="data\19.jpg">
+
+    <img id="f95" src="data\18.jpg">
+
+    <img id="f96" src="data\17.jpg">
+
+    <img id="f97" src="data\16.jpg">
+
+    <img id="f98" src="data\14.jpg">
+
+    <img id="f99" src="data\121121.jpg">
+
+    <img id="f100" src="data\12.jpg">
+
+    <img id="f101" src="data\1112222.jpg">
+
+    <img id="f102" src="data\11.jpg">
+
+    <img id="f103" src="data\0l1s.jpg">
+
+    <img id="f104" src="data\08.jpg">
+
+    <img id="f105" src="data\06.jpg">
+
+    <img id="f106" src="data\05.jpg">
+
+    <img id="f107" src="data\04.jpg">
+
+    <img id="f108" src="data\02.jpg">
+
+</div>
 </body>
 </html>
+
