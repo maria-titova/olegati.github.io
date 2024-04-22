@@ -1,298 +1,1518 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="simple gallery">
-    <title>Gallery</title>
-    <link rel="icon" href="/favicon.ico">
-    <style type="text/css" media="screen">
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
 
-      body {
-        background-color: #191919;
-        display: flex;
-        flex-flow: column;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  <meta property="og:title" content="My Gallery">
+  <meta property="og:description" content="Default description of my gallery">
+  <meta property="og:image" content="/images/photos/02.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="My Gallery">
 
-      #gallery {
-        display: flex;
-        flex: 1;
-        overflow: hidden;
-      }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:alt" content="My Gallery">
 
-      #photos {
-        flex: 1;
-        display: flex;
-        overflow: hidden;
-        position:relative;
-        -khtml-user-select: none;
-        -o-user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-      }
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/photoswipe.css">
+  <link rel="stylesheet" href="css/default-skin.css">
+  <link rel="stylesheet" href="css/main.css">
 
-      #photos > img {
-        margin: auto;
-        max-height: 95%;
-        max-width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        color: grey;
-        text-align: center;
-      }
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200&display=swap" rel="stylesheet">
 
-      .hidden {
-        display: none;
-      }
+  <title>My Gallery</title>
 
-      .active {
-        display: block;
-      }
+  
+  <style>
+    .header-image {
+      background: #333366 url("images/photos/02.jpg");
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
 
-      .clickable-icon {
-        cursor: pointer;
-      }
+<body>
 
-      #controls {
-        text-align: center;
-        color: grey;
-        margin-bottom: 10px;
-      }
+  <div class="jumbotron header-image">
+    <div class="header-info">
+      <h1>My Gallery</h1>
+      <div class="header-info-details">Default description of my gallery</div>
+    </div>
+  </div>
 
-      #img-counter {
-        vertical-align: top;
-        display: inline-block;
-        margin-top: 7px;
-        width: 80px;
-      }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
 
-          function updateCounter(){
-              // Set index number of current active image
-              var imgIndex = $("#gallery img").index($("#gallery img.active")) + 1
-              $('#current-img').text(imgIndex + "/")
-          };
+  <!-- GALLERY DESCRIPTIONS -->
 
-          function loadImg(){
-              var active = $('#gallery img.active')
-              if (! active.attr('src')) {
-                  active.attr('src', function (){ return active.attr('data-src')})
-              }
-          };
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col gallery-section">
 
-          function toggleActiveImg(button, callback){
-              var active = $('#gallery img.active')
+        <h2>
+          <a name="section_0"></a>
+          My Gallery
+          <a href="#section_0">
+              <svg class="section-link-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+          </a>
+        </h2>
+        <p></p>
+    </div>
+  </div>
+  
+    <div class="row">
+  <div class="col gallery">
+    
+      <a href="images\photos\02.jpg"
+         class="gallery-photo"
+         data-index="0"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\02.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\04.jpg"
+         class="gallery-photo"
+         data-index="1"
+         data-type="image"
+         data-gallery="0"
+         data-width="474"
+         data-height="640"
+         data-date=""
+         style="--w: 118; --h: 160">
+         <img src="images\thumbnails\04.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\05.jpg"
+         class="gallery-photo"
+         data-index="2"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\05.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\06.jpg"
+         class="gallery-photo"
+         data-index="3"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\06.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\08.jpg"
+         class="gallery-photo"
+         data-index="4"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\08.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\0l1s.jpg"
+         class="gallery-photo"
+         data-index="5"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\0l1s.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\11.jpg"
+         class="gallery-photo"
+         data-index="6"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\11.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\1112222.jpg"
+         class="gallery-photo"
+         data-index="7"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\1112222.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\12.jpg"
+         class="gallery-photo"
+         data-index="8"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\12.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\121121.jpg"
+         class="gallery-photo"
+         data-index="9"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\121121.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\12345.JPG"
+         class="gallery-photo"
+         data-index="10"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="525"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\12345.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\14.jpg"
+         class="gallery-photo"
+         data-index="11"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\14.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\16.jpg"
+         class="gallery-photo"
+         data-index="12"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\16.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\17.jpg"
+         class="gallery-photo"
+         data-index="13"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\17.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\18.jpg"
+         class="gallery-photo"
+         data-index="14"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\18.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\19.jpg"
+         class="gallery-photo"
+         data-index="15"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\19.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\20.jpg"
+         class="gallery-photo"
+         data-index="16"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\20.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\201201.JPG"
+         class="gallery-photo"
+         data-index="17"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\201201.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\201203.JPG"
+         class="gallery-photo"
+         data-index="18"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\201203.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\201204.JPG"
+         class="gallery-photo"
+         data-index="19"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\201204.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\21.jpg"
+         class="gallery-photo"
+         data-index="20"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\21.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\22.jpg"
+         class="gallery-photo"
+         data-index="21"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\22.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\23.jpg"
+         class="gallery-photo"
+         data-index="22"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\23.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\24.jpg"
+         class="gallery-photo"
+         data-index="23"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\24.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\3.jpg"
+         class="gallery-photo"
+         data-index="24"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\3.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\30.jpg"
+         class="gallery-photo"
+         data-index="25"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\30.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\33.jpg"
+         class="gallery-photo"
+         data-index="26"
+         data-type="image"
+         data-gallery="0"
+         data-width="536"
+         data-height="640"
+         data-date=""
+         style="--w: 134; --h: 160">
+         <img src="images\thumbnails\33.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\34.jpg"
+         class="gallery-photo"
+         data-index="27"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="556"
+         data-date=""
+         style="--w: 184; --h: 160">
+         <img src="images\thumbnails\34.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\35.jpg"
+         class="gallery-photo"
+         data-index="28"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="500"
+         data-date=""
+         style="--w: 205; --h: 160">
+         <img src="images\thumbnails\35.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\36.jpg"
+         class="gallery-photo"
+         data-index="29"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\36.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\37.jpg"
+         class="gallery-photo"
+         data-index="30"
+         data-type="image"
+         data-gallery="0"
+         data-width="417"
+         data-height="640"
+         data-date=""
+         style="--w: 104; --h: 160">
+         <img src="images\thumbnails\37.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\38.jpg"
+         class="gallery-photo"
+         data-index="31"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\38.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\39.jpg"
+         class="gallery-photo"
+         data-index="32"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\39.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\4.jpg"
+         class="gallery-photo"
+         data-index="33"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\4.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\40.jpg"
+         class="gallery-photo"
+         data-index="34"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\40.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\41.jpg"
+         class="gallery-photo"
+         data-index="35"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\41.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\42.jpg"
+         class="gallery-photo"
+         data-index="36"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\42.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\43.jpg"
+         class="gallery-photo"
+         data-index="37"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\43.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\44.jpg"
+         class="gallery-photo"
+         data-index="38"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\44.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\47.jpg"
+         class="gallery-photo"
+         data-index="39"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\47.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\49.jpg"
+         class="gallery-photo"
+         data-index="40"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\49.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\5.jpg"
+         class="gallery-photo"
+         data-index="41"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\5.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\50.jpg"
+         class="gallery-photo"
+         data-index="42"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\50.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\51.jpg"
+         class="gallery-photo"
+         data-index="43"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\51.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\52.jpg"
+         class="gallery-photo"
+         data-index="44"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\52.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\53.jpg"
+         class="gallery-photo"
+         data-index="45"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\53.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\54.jpg"
+         class="gallery-photo"
+         data-index="46"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\54.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\55.jpg"
+         class="gallery-photo"
+         data-index="47"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\55.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\56.jpg"
+         class="gallery-photo"
+         data-index="48"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\56.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\58.jpg"
+         class="gallery-photo"
+         data-index="49"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\58.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\59.jpg"
+         class="gallery-photo"
+         data-index="50"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="455"
+         data-date=""
+         style="--w: 225; --h: 160">
+         <img src="images\thumbnails\59.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\6.jpg"
+         class="gallery-photo"
+         data-index="51"
+         data-type="image"
+         data-gallery="0"
+         data-width="457"
+         data-height="640"
+         data-date=""
+         style="--w: 114; --h: 160">
+         <img src="images\thumbnails\6.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\60.jpg"
+         class="gallery-photo"
+         data-index="52"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\60.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\61.jpg"
+         class="gallery-photo"
+         data-index="53"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\61.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\62.jpg"
+         class="gallery-photo"
+         data-index="54"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\62.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\63.jpg"
+         class="gallery-photo"
+         data-index="55"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\63.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\64.jpg"
+         class="gallery-photo"
+         data-index="56"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\64.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\66.jpg"
+         class="gallery-photo"
+         data-index="57"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\66.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\67.jpg"
+         class="gallery-photo"
+         data-index="58"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\67.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\69.jpg"
+         class="gallery-photo"
+         data-index="59"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="408"
+         data-date=""
+         style="--w: 251; --h: 160">
+         <img src="images\thumbnails\69.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\6os.jpg"
+         class="gallery-photo"
+         data-index="60"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\6os.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\7.jpg"
+         class="gallery-photo"
+         data-index="61"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\7.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\70.jpg"
+         class="gallery-photo"
+         data-index="62"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\70.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\71.jpg"
+         class="gallery-photo"
+         data-index="63"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\71.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\710.jpg"
+         class="gallery-photo"
+         data-index="64"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\710.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\711.jpg"
+         class="gallery-photo"
+         data-index="65"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="619"
+         data-date=""
+         style="--w: 124; --h: 160">
+         <img src="images\thumbnails\711.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\712.jpg"
+         class="gallery-photo"
+         data-index="66"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\712.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\713.jpg"
+         class="gallery-photo"
+         data-index="67"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\713.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\714.jpg"
+         class="gallery-photo"
+         data-index="68"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\714.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\715.jpg"
+         class="gallery-photo"
+         data-index="69"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\715.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\716.jpg"
+         class="gallery-photo"
+         data-index="70"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\716.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\717.jpg"
+         class="gallery-photo"
+         data-index="71"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\717.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\718.jpg"
+         class="gallery-photo"
+         data-index="72"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\718.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\719.jpg"
+         class="gallery-photo"
+         data-index="73"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\719.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\720.jpg"
+         class="gallery-photo"
+         data-index="74"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\720.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\73.jpg"
+         class="gallery-photo"
+         data-index="75"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\73.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\730.jpg"
+         class="gallery-photo"
+         data-index="76"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\730.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\731.jpg"
+         class="gallery-photo"
+         data-index="77"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\731.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\74.jpg"
+         class="gallery-photo"
+         data-index="78"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\74.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\75.jpg"
+         class="gallery-photo"
+         data-index="79"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\75.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\76.jpg"
+         class="gallery-photo"
+         data-index="80"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\76.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\77.jpg"
+         class="gallery-photo"
+         data-index="81"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\77.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\77777777.jpg"
+         class="gallery-photo"
+         data-index="82"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\77777777.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\78.jpg"
+         class="gallery-photo"
+         data-index="83"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\78.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\79.jpg"
+         class="gallery-photo"
+         data-index="84"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\79.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\8.jpg"
+         class="gallery-photo"
+         data-index="85"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\8.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\80.jpg"
+         class="gallery-photo"
+         data-index="86"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\80.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\81.jpg"
+         class="gallery-photo"
+         data-index="87"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\81.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\82.jpg"
+         class="gallery-photo"
+         data-index="88"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\82.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\83.jpg"
+         class="gallery-photo"
+         data-index="89"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="486"
+         data-date=""
+         style="--w: 210; --h: 160">
+         <img src="images\thumbnails\83.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\85.jpg"
+         class="gallery-photo"
+         data-index="90"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\85.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\86.jpg"
+         class="gallery-photo"
+         data-index="91"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\86.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\87.jpg"
+         class="gallery-photo"
+         data-index="92"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\87.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1297.JPG"
+         class="gallery-photo"
+         data-index="93"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1297.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1305.JPG"
+         class="gallery-photo"
+         data-index="94"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1305.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1346.JPG"
+         class="gallery-photo"
+         data-index="95"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\IMG_1346.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1409.JPG"
+         class="gallery-photo"
+         data-index="96"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\IMG_1409.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1422.JPG"
+         class="gallery-photo"
+         data-index="97"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\IMG_1422.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1423.JPG"
+         class="gallery-photo"
+         data-index="98"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\IMG_1423.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1531.JPG"
+         class="gallery-photo"
+         data-index="99"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1531.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1742.JPG"
+         class="gallery-photo"
+         data-index="100"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\IMG_1742.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1749.JPG"
+         class="gallery-photo"
+         data-index="101"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1749.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1865.JPG"
+         class="gallery-photo"
+         data-index="102"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1865.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1868.JPG"
+         class="gallery-photo"
+         data-index="103"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1868.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\IMG_1903.JPG"
+         class="gallery-photo"
+         data-index="104"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\IMG_1903.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\OO2.jpg"
+         class="gallery-photo"
+         data-index="105"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="525"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\OO2.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\OO3.jpg"
+         class="gallery-photo"
+         data-index="106"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="569"
+         data-date=""
+         style="--w: 197; --h: 160">
+         <img src="images\thumbnails\OO3.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\chkaf1.jpg"
+         class="gallery-photo"
+         data-index="107"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="525"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\chkaf1.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\contacts.jpg"
+         class="gallery-photo"
+         data-index="108"
+         data-type="image"
+         data-gallery="0"
+         data-width="289"
+         data-height="385"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\contacts.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\g177.JPG"
+         class="gallery-photo"
+         data-index="109"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\g177.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\g277.JPG"
+         class="gallery-photo"
+         data-index="110"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\g277.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\g488.jpg"
+         class="gallery-photo"
+         data-index="111"
+         data-type="image"
+         data-gallery="0"
+         data-width="750"
+         data-height="498"
+         data-date=""
+         style="--w: 241; --h: 160">
+         <img src="images\thumbnails\g488.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol1.jpg"
+         class="gallery-photo"
+         data-index="112"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\ol1.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol11.jpg"
+         class="gallery-photo"
+         data-index="113"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol11.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol2.jpg"
+         class="gallery-photo"
+         data-index="114"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol2.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol3.jpg"
+         class="gallery-photo"
+         data-index="115"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol3.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol4.jpg"
+         class="gallery-photo"
+         data-index="116"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol4.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol5.jpg"
+         class="gallery-photo"
+         data-index="117"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="479"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol5.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol7.jpg"
+         class="gallery-photo"
+         data-index="118"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol7.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol8.jpg"
+         class="gallery-photo"
+         data-index="119"
+         data-type="image"
+         data-gallery="0"
+         data-width="480"
+         data-height="640"
+         data-date=""
+         style="--w: 120; --h: 160">
+         <img src="images\thumbnails\ol8.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\ol9.jpg"
+         class="gallery-photo"
+         data-index="120"
+         data-type="image"
+         data-gallery="0"
+         data-width="640"
+         data-height="480"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\ol9.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\oo4.jpg"
+         class="gallery-photo"
+         data-index="121"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="525"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\oo4.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\oo5.jpg"
+         class="gallery-photo"
+         data-index="122"
+         data-type="image"
+         data-gallery="0"
+         data-width="700"
+         data-height="525"
+         data-date=""
+         style="--w: 214; --h: 160">
+         <img src="images\thumbnails\oo5.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\shkaf1.jpg"
+         class="gallery-photo"
+         data-index="123"
+         data-type="image"
+         data-gallery="0"
+         data-width="924"
+         data-height="480"
+         data-date=""
+         style="--w: 308; --h: 160">
+         <img src="images\thumbnails\shkaf1.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\shkaf2.jpg"
+         class="gallery-photo"
+         data-index="124"
+         data-type="image"
+         data-gallery="0"
+         data-width="954"
+         data-height="480"
+         data-date=""
+         style="--w: 318; --h: 160">
+         <img src="images\thumbnails\shkaf2.jpg" class="thumbnail rounded" alt=""/></a>
+    
+      <a href="images\photos\shkaf3.jpg"
+         class="gallery-photo"
+         data-index="125"
+         data-type="image"
+         data-gallery="0"
+         data-width="914"
+         data-height="480"
+         data-date=""
+         style="--w: 304; --h: 160">
+         <img src="images\thumbnails\shkaf3.jpg" class="thumbnail rounded" alt=""/></a>
+    
+  </div>
+</div>
+  
+</div>
 
-              if (button.id == "next") {
-                  var next = active.next()
-                  active.removeClass('active').addClass('hidden')
+  <!-- END GALLERY DESCRIPTIONS -->
 
-                  if (next.length == 0){
-                      $('#gallery img:first-child').removeClass('hidden').addClass('active')
-                  } else if (next.is('img')) {
-                      next.removeClass('hidden').addClass('active')
-                  }
 
-              } else if (button.id == "back") {
-                  var prev = active.prev()
-                  active.removeClass('active').addClass('hidden')
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
 
-                  if (prev.length == 0){
-                      $('#gallery img:last-child').removeClass('hidden').addClass('active')
-                  } else {
-                      prev.removeClass('hidden').addClass('active')
-                  }
-              }
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-              callback()
-          };
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          // Make the first image of the gallery visible
-          $('#gallery img:first-child').removeClass('hidden').addClass('active');
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
 
-          // Set total number of images
-          $('#total-count').text($("#gallery img").length);
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
 
-          loadImg()
-          updateCounter()
-
-          // Cycle through images with 'next' and 'back'
-          $('#next, #back').click(function() {
-              toggleActiveImg(this, function(){
-                  loadImg()
-                  updateCounter()
-              });
-          });
-
-          // Capture left and right arrow key presses to cycle through images
-          $(document).keypress(function(e){
-              if(e.keyCode == 39){
-                  $("#next").click();
-              }
-              if(e.keyCode == 37){
-                  $("#back").click();
-              }
-          });
-      });
-    </script>
-  </head>
-  <body>
-    <div id="gallery">
-      <div id="photos">
-<img class="hidden" data-src="02.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="04.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="05.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="06.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="08.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="0l1s.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="11.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="1112222.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="12.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="121121.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="12345.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="14.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="16.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="17.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="18.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="19.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="20.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="201201.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="201203.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="201204.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="21.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="22.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="23.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="24.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="3.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="30.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="33.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="34.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="35.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="36.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="37.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="38.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="39.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="4.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="40.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="41.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="42.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="43.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="44.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="47.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="49.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="5.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="50.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="51.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="52.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="53.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="54.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="55.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="56.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="58.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="59.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="6.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="60.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="61.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="62.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="63.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="64.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="66.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="67.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="69.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="6os.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="7.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="70.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="71.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="710.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="711.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="712.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="713.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="714.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="715.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="716.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="717.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="718.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="719.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="720.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="73.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="730.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="731.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="74.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="75.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="76.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="77.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="77777777.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="78.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="79.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="8.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="80.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="81.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="82.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="83.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="85.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="86.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="87.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1297.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1305.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1346.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1409.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1422.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1423.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1531.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1742.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1749.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1865.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1868.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="IMG_1903.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="OO2.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="OO3.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="chkaf1.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="contacts.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="g177.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="g277.JPG" alt="Loading photo..." />
-<img class="hidden" data-src="g488.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol1.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol11.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol2.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol3.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol4.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol5.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol7.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol8.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="ol9.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="oo4.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="oo5.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="shkaf1.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="shkaf2.jpg" alt="Loading photo..." />
-<img class="hidden" data-src="shkaf3.jpg" alt="Loading photo..." />
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
       </div>
     </div>
-    <div id="controls">
-      <span id="back">
-        <img class="clickable-icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik03LjcwMSwxNC4yNzZsOS41ODYtOS41ODVjMC44NzktMC44NzgsMi4zMTctMC44NzgsMy4xOTUsMGwwLjgwMSwwLjhjMC44NzgsMC44NzcsMC44NzgsMi4zMTYsMCwzLjE5NCAgTDEzLjk2OCwxNmw3LjMxNSw3LjMxNWMwLjg3OCwwLjg3OCwwLjg3OCwyLjMxNywwLDMuMTk0bC0wLjgwMSwwLjhjLTAuODc4LDAuODc5LTIuMzE2LDAuODc5LTMuMTk1LDBsLTkuNTg2LTkuNTg3ICBDNy4yMjksMTcuMjUyLDcuMDIsMTYuNjIsNy4wNTQsMTZDNy4wMiwxNS4zOCw3LjIyOSwxNC43NDgsNy43MDEsMTQuMjc2eiIgZmlsbD0iIzUxNTE1MSIvPjwvc3ZnPg==">
-      </span>
-      <span id="img-counter"><span id="current-img"></span><span id="total-count"></span></span>
-      <span id="next">
-        <img class="clickable-icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yOTEsMTQuMjc2TDE0LjcwNSw0LjY5Yy0wLjg3OC0wLjg3OC0yLjMxNy0wLjg3OC0zLjE5NSwwbC0wLjgsMC44Yy0wLjg3OCwwLjg3Ny0wLjg3OCwyLjMxNiwwLDMuMTk0ICBMMTguMDI0LDE2bC03LjMxNSw3LjMxNWMtMC44NzgsMC44NzgtMC44NzgsMi4zMTcsMCwzLjE5NGwwLjgsMC44YzAuODc4LDAuODc5LDIuMzE3LDAuODc5LDMuMTk1LDBsOS41ODYtOS41ODcgIGMwLjQ3Mi0wLjQ3MSwwLjY4Mi0xLjEwMywwLjY0Ny0xLjcyM0MyNC45NzMsMTUuMzgsMjQuNzYzLDE0Ljc0OCwyNC4yOTEsMTQuMjc2eiIgZmlsbD0iIzUxNTE1MSIvPjwvc3ZnPg==">
-      </span>
-    </div>
-  </body>
+  </div>
+
+  <footer class="container-fluid text-right">
+    
+    <p>Created by <a rel="noreferrer" href="https://www.haltakov.net/simple-photo-gallery">Simple Photo Gallery</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/photoswipe.min.js"></script>
+  <script src="js/photoswipe-ui-default.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
