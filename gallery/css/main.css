@@ -1,31 +1,5 @@
-a {font-family:Verdana, Arial; font-size:9pt; text-decoration:none; margin:0pt;}  
-a:link {color:#0000cc;}  
-a:hover {text-decoration:underline;}  
-a:active {color:#ff0000; text-decoration:underline;}  
-a:visited {color:#000066;} 
-
-a.main {font-family:Verdana; font-size:10pt; margin:0pt; text-decoration:underline; }  
-a:link.main {color:#000000; text-decoration:underline; }  
-a:hover.main {text-decoration:none; }  
-a:active.main {color:#000000; text-decoration:none; }  
-a:visited.main {color:#000000; }  
-
-BODY {
-SCROLLBAR-FACE-COLOR:#999999;
-SCROLLBAR-HIGHLIGHT-COLOR:#999999;
-SCROLLBAR-SHADOW-COLOR:#999999;
-SCROLLBAR-ARROW-COLOR:#000000;
-SCROLLBAR-BASE-COLOR:#000000;
-SCROLLBAR-3D-LIGHT-COLOR:#000000;
-SCROLLBAR-DARK-SHADOW-COLOR:#000000;
-}
-
-table, th, tr, td {
-  border: 1px solid;
-}
-
 body {
-  background-color: #999999;
+  background-color: #eee;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -84,7 +58,7 @@ body {
 
 .gallery-section h2 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .gallery-section h2 a {
@@ -106,7 +80,7 @@ body {
 
 .gallery-section p {
   width: 70%;
-  margin: 0px auto 40px;
+  margin: 0px auto 20px;
 }
 
 .caption-date {
