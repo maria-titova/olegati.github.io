@@ -20,6 +20,10 @@ SCROLLBAR-3D-LIGHT-COLOR:#000000;
 SCROLLBAR-DARK-SHADOW-COLOR:#000000;
 }
 
+table, th, tr, td {
+  border: 1px solid;
+}
+
 body {
   background-color: #999999;
   font-family: 'Source Sans Pro', sans-serif;
